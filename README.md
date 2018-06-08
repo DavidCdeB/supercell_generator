@@ -1,9 +1,28 @@
-# `supercell_generator.py`
+# Table of Contents
+
+<!-- - [What is the QHA program ?](#WhatisQHA)
+- [What is the quasi-harmonic approximation ?](#Whatisquasi) -->
+1. [What is the `supercell_generator` program ?](#example)
+4. [Why is the `supercell_generator` useful ?](#example2)
+3. [Statement of the problem](#example3)
+6. [How to run `QHA_2D`](#example6)
+7. [Test](#example7)
+8. [How to cite](#example8)
+9. [Contributing](#example9)
+10. [References](#example10)
+
+
+
+<a name="example"></a>
+# What is the `supercell_generator.py` program ?]
+
 Given a direct matrix lattice vectors, this program creates a set of supercell matrix candidates for which the new lattice parameters (`a1_SC`, `a2_SC`, `a3_SC`) are greater than a chosen value, and the three of them of the same size, within a tolerance.
 
 This allows to construct supercells for different polymorphs with lattice parameters of equal legth, so that we ensure phonons are calculated within a "sphere" of equal radius.
 
-# Why is this important ?
+<a name="example2"></a>
+# Why is the `supercell_generator` useful ? 
+
 Let's consider this example:
 
 Calcite I is a trigonal crystal, where the primitive cell is trigonal, and the crystallographic is hexagonal. This is the direct lattice vectors matrix for the primitive cell:
@@ -49,6 +68,7 @@ that will produce the following:
 
 `a1_SC = a2_SC = a3_SC = 11.00396   11.00396   11.00396`. This supercell is not that easy to sort it out... The goal of this program is to sort out this supercell for any given direct lattice matrix vectors.
 
+<a name="example3"></a>
 # Statement of the problem
 
 Given the matrices `{aij}`, `{Eij}` and `{aij_SC}`, it is satisfied that:
@@ -68,9 +88,19 @@ where `x` stands for a standard matrix multiplication (rows, columns).
 
 In other words:
 
-[![enter image description here][2]][2]
+<p align="center">
+  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/65.png">
+</p>
 
-[![enter image description here][3]][3]
+<!-- -
+[![enter image description here][2]][2] -->
+
+<p align="center">
+  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/64.png">
+</p>
+
+<!-- 
+[![enter image description here][3]][3] -->
 
 **1)** Each element of `{aij}` matrix is known:
 
@@ -114,7 +144,12 @@ a3_SC =  (a3x_SC**2 + a3y_SC**2 + a3z_SC**2)**(0.5)
 
 I would like to brute force loop over all possible `Eij` values (Eqns(2)) so that I can find those `Eij` for which:
 
-[![enter image description here][1]][1]
+<p align="center">
+  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/67.png">
+</p>
+
+<!-- 
+[![enter image description here][1]][1] -->
 
 In reality, I am imposing two conditions: 
 * Lattice parameter of the supercell to be similar (within a tolerance) AND 
