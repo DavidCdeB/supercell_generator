@@ -89,14 +89,14 @@ where `x` stands for a standard matrix multiplication (rows, columns).
 In other words:
 
 <p align="center">
-  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/65.png">
+  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README/65.png">
 </p>
 
 <!-- -
 [![enter image description here][2]][2] -->
 
 <p align="center">
-  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/64.png">
+  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README/64.png">
 </p>
 
 <!-- 
