@@ -145,7 +145,7 @@ a3_SC =  (a3x_SC**2 + a3y_SC**2 + a3z_SC**2)**(0.5)
 I would like to brute force loop over all possible `Eij` values (Eqns(2)) so that I can find those `Eij` for which:
 
 <p align="center">
-  <img width="256" height="256" src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/67.png">
+  <img src="https://github.com/DavidCdeB/supercell_generator/blob/master/Images_for_README_md/67.png">
 </p>
 
 <!-- 
