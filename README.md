@@ -262,9 +262,9 @@ itertools.product([0, 1, 2, -1, -2]
 ```
 a1_SC ~= a2_SC ~= a3_SC > tol_1
 ```
-    * `tol_1` controls how big the lattice parameters are. Tipically this value is 10 Angtrom. This is the default in the program.
+  * `tol_1` controls how big the lattice parameters are. Tipically this value is 10 Angtrom. This is the default in the program.
 
-    * `tol_2` controls how similar are the lattice parameters. Typically this value is 1E-6, although it can be stricter. This is the default in the program.
+  * `tol_2` controls how similar are the lattice parameters. Typically this value is 1E-6, although it can be stricter. This is the default in the program.
 
 * Run `./supercell_generator.sh`
 
