@@ -305,9 +305,11 @@ A_SC =  [[ 4.9616  7.9705  5.7394]
 ```
 > The lattice parameters of the supercell. They are equal (with a small tolerance `tol_1`)
 
+```
 a1_SC =  11.0039564326
 a2_SC =  11.0039564326
 a3_SC =  11.0039564326
+```
 
 > The determintant of the supercell expansion matrix:
 
@@ -322,7 +324,7 @@ E_sol =  [[ 1.  1.  1.]
  [-1.  1.  1.]]
 END ++++++++++
 ````
-Thus, this supercell expansion matrix will be appropiate to satisty this condition:
+The supercell expansion matrix `E_sol` will be appropiate to satisty this condition:
 
 ```
 a1_SC ~= a2_SC ~= a3_SC > tol_1
