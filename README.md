@@ -240,7 +240,7 @@ For example:
 
 
 <a name="example3"></a>
-# [How to run `supercell_generator`. A guided tour](#example3)
+# How to run `supercell_generator`. A guided tour
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
 * Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
