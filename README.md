@@ -5,12 +5,10 @@
 1. [What is the `supercell_generator` program ?](#example)
 4. [Why is the `supercell_generator` useful ?](#example2)
 3. [Statement of the problem](#example3)
-4. [How to run `supercell_generator`](#example4)
+4. [How to run `supercell_generator`. A guided tour through the output](#example4)
 5. [Test](#example5)
 6. [How to cite](#example6)
 7. [Contributing](#example7)
-
-
 
 <a name="example"></a>
 # What is the `supercell_generator.py` program ?]
@@ -240,7 +238,7 @@ For example:
 
 
 <a name="example3"></a>
-# How to run `supercell_generator`. A guided tour
+# How to run `supercell_generator`. A guided tour through the output
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
 * Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
