@@ -270,50 +270,52 @@ a1_SC ~= a2_SC ~= a3_SC > tol_1
 
 * Run `./supercell_generator.sh`
 
-* If you run this program in the `TEST` folder, you will have the oppotunity to test this on Aragonite. The output is the following:
+If you run this program in the `TEST` folder, you will have the oppotunity to test this on Aragonite. The output is the following:
 
 ``` 
 ./aragonite_SINGLE_POINT.out
 ```
-This confirms the output that is being read.
+> This confirms that the output is being read.
 
 ```
 A array =  [[ 4.9616  0.      0.    ]
  [ 0.      7.9705  0.    ]
  [ 0.      0.      5.7394]]
 ```
-This tells you the direct matrix of lattice parameters that has been extracted.
+> This tells you the direct matrix of lattice parameters that has been extracted.
 
 ```
 tol_1 =  10
 tol_2 =  0.01
 ```
-This confirms the tolerances being used.
+> This confirms the tolerances being used.
 
 ```
 len(E) =  19683
 ```
-This confirms the number of matrices candidates for a combination of integers `0, 1, -1`.
+> This confirms the number of matrices candidates for a combination of integers `0, 1, -1`.
 
 At this point, all the sucessful candidates will be printed:
 
-The direct lattice vectors of the supercell:
+> The direct lattice vectors of the supercell:
 ```
 A_SC =  [[ 4.9616  7.9705  5.7394]
  [ 4.9616  7.9705 -5.7394]
  [-4.9616  7.9705  5.7394]]
 ```
-The lattice parameters of the supercell. They are equal (with a small tolerance `tol_1`)
+> The lattice parameters of the supercell. They are equal (with a small tolerance `tol_1`)
 
 a1_SC =  11.0039564326
 a2_SC =  11.0039564326
 a3_SC =  11.0039564326
 
-The determintant of the supercell expansion matrix:
+> The determintant of the supercell expansion matrix:
 
-```det_indx_E =  4.0```
+```
+det_indx_E =  4.0
+```
 
-The supercell expansion matrix we are up to:
+> The supercell expansion matrix we are up to:
 ```
 E_sol =  [[ 1.  1.  1.]
  [ 1.  1. -1.]
