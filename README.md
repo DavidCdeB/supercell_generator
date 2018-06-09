@@ -226,7 +226,7 @@ There is this problem: considering what has been said above, it would be necessa
 but this would not be considering all the possible combinations, because for a given `e11`, for instance, it is also valid:
 
 ```
-      a1x_SC = e11 * a1x + E12[0] * a2x + E13[0:-1] * a3x
+a1x_SC = e11 * a1x + E12[0] * a2x + E13[0:-1] * a3x
 ```
 This is very cumbresome.
 
@@ -240,7 +240,7 @@ For example:
 
 
 <a name="example3"></a>
-3. [How to run `supercell_generator`. A guided tour](#example3)
+# [How to run `supercell_generator`. A guided tour](#example3)
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
 * Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
@@ -266,7 +266,7 @@ a1_SC ~= a2_SC ~= a3_SC > tol_1
 ```
     * `tol_1` controls how big the lattice parameters are. Tipically this value is 10 Angtrom. This is the default in the program.
 
-    * `tol_2` controls how similar are the lattice parameters. Typically this value is 1E-2, although it can be stricter. This is the default in the program.
+    * `tol_2` controls how similar are the lattice parameters. Typically this value is 1E-6, although it can be stricter. This is the default in the program.
 
 * Run `./supercell_generator.sh`
 

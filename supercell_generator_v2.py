@@ -10,7 +10,6 @@ import os
 
 path='./'
 filename = os.path.join(path, '*.out')
-#filename = glob.glob(name)
 for fname in glob.glob(filename):
   print fname
 
@@ -19,13 +18,11 @@ P1 = []
 P2 = []
 
 with open(fname) as gout:
-#   final_optimized_geometry = False
     for line in gout:
         if 'DIRECT LATTICE VECTORS CARTESIAN COMPONENTS (ANGSTROM)' in line:
             final_optimized_geometry = True
             done = gout.next()
             done = gout.next()
-#           print 'done = ', done
 
             p00 = done.split()[0]
             P0.append(p00)
@@ -36,8 +33,6 @@ with open(fname) as gout:
             p02 = done.split()[2]
             P0.append(p02)
      
-#           print 'p00 = ', p00
-
             done = gout.next()
 
             p10 = done.split()[0]
@@ -60,53 +55,24 @@ with open(fname) as gout:
             p22 = done.split()[2]
             P2.append(p22)
 
-#print 'P0 = ', P0
-#print 'type(P0) = ', type(P0)
-#for i in P0:
-# print type(i)
-
 P0 = np.array(P0)
 P1 = np.array(P1)
 P2 = np.array(P2)
-#print 'P0 = ', P0
-#print 'type(P0) = ', type(P0)
-#for i in P0:
-# print type(i)
 
 P0 = P0.astype(np.float)
 P1 = P1.astype(np.float)
 P2 = P2.astype(np.float)
-#print 'P0 = ', P0
-#print 'type(P0) = ', type(P0)
-#for i in P0:
-# print type(i)
-
-#print 'shape(P2) = ', np.shape(P2)
 
 A = np.vstack((P0, P1, P2))
 print 'A array = ', A
-#print 'shape(A array) = ', np.shape(A)
 
 
 
-# Alternative, you can provide here the direct matrix lattice vectors (primitive cell):
+# Alternatively, you can provide here the direct matrix lattice vectors (primitive cell):
 # Aragonite:
 #A =np.array([[0.496160000000e+01,   0.000000000000e+00 ,  0.000000000000e+00],
 #             [0.000000000000e+00,   0.797050000000e+01,   0.000000000000e+00],
 #             [0.000000000000e+00,   0.000000000000e+00,   0.573940000000e+01]])
-
-# True description of calcite II:
-#A =np.array([[   0.606983596000E+01,   0.371670258988E-15,   0.000000000000E+00 ],   
-#             [   0.000000000000E+00,   0.501688998000E+01,   0.000000000000E+00 ],
-#             [  -0.196296039941E+01,   0.459955262889E-15,   0.725062164908E+01 ]])
-
-
-#print 'A =  ', A
-#print 'shape(A array) = ', np.shape(A)
-
-#print 'A[0][0] =  ', A[0][0]
-#print 'A[0][1] =  ', A[0][1]
-#print 'A[0][2] =  ', A[0][2]
 
 
 # Supercell expansion matrix generator:
@@ -115,15 +81,7 @@ N = 3
 E = [np.reshape(np.array(i), (K, N)) for i in itertools.product([0, 1, -1], repeat = K*N)]
 
 tol_1 = 10
-#tol_2 = 1E-8
-#tol_2 = 1E-7
 tol_2 = 1E-6
-#tol_2 = 1E-5
-#tol_2 = 1E-4
-#tol_2 = 1E-3
-#tol_2 = 1E-2
-#tol_2 = 1E-1
-#tol_2 = 1
 
 print "tol_1 = ", tol_1
 print "tol_2 = ", tol_2
