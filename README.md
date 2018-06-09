@@ -11,14 +11,14 @@
 7. [Contributing](#example7)
 
 <a name="example"></a>
-# What is the `supercell_generator.py` program ?]
+## What is the `supercell_generator.py` program ?
 
 Given a direct matrix lattice vectors, this program creates a set of supercell matrix candidates for which the new lattice parameters (`a1_SC`, `a2_SC`, `a3_SC`) are greater than a chosen value, and the three of them of the same size, within a tolerance.
 
 This allows to construct supercells for different polymorphs with lattice parameters of equal legth, so that we ensure phonons are calculated within a "sphere" of equal radius.
 
 <a name="example2"></a>
-# Why is the `supercell_generator` useful ? 
+## Why is the `supercell_generator` useful ? 
 
 Let's consider this example:
 
@@ -66,7 +66,7 @@ that will produce the following:
 `a1_SC = a2_SC = a3_SC = 11.00396   11.00396   11.00396`. This supercell is not that easy to sort it out... The goal of this program is to sort out this supercell for any given direct lattice matrix vectors.
 
 <a name="example3"></a>
-# Statement of the problem
+## Statement of the problem
 
 Given the matrices `{aij}`, `{Eij}` and `{aij_SC}`, it is satisfied that:
 
@@ -238,7 +238,7 @@ For example:
 
 
 <a name="example4"></a>
-# How to run `supercell_generator`. A guided tour through the output
+## How to run `supercell_generator`. A guided tour through the output
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
 * Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
