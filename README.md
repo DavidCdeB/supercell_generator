@@ -5,7 +5,7 @@
 1. [What is the `supercell_generator` program ?](#example)
 4. [Why is the `supercell_generator` useful ?](#example2)
 3. [Statement of the problem](#example3)
-6. [How to run `QHA_2D`](#example6)
+4. [How to run `supercell_generator`](#example4)
 7. [Test](#example7)
 8. [How to cite](#example8)
 9. [Contributing](#example9)
@@ -240,31 +240,68 @@ For example:
 * If there are 5 integers: `[0, 1, -1, 2, -2]` there will be a total number of `1953125` 3x3 supercell expansion matrices candidates.
 
 
+<a name="example3"></a>
+3. [How to run `supercell_generator`. A guided tour](#example3)
+* 
+
+## How to run `supercell_generator`
+
+* Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
+* Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
+* Remember that name of all ths output has to end in `*.out`
+* Run `./supercell_generator.sh`
+
+* Alternatively, you can provide here the direct matrix lattice vectors (primitive cell):
+
+ 
 
 
-The final result would be to save in a file the candidates that satisfy Eq. 67 in this way:
+**_Prerequisites_**
 
-```
-|E11 E12  E13|  
-|E21 E22  E23|  
-|E31 E32  E33|  
-<Value of `a1_SC`>    <Value of `a2_SC`>    <Value of `a3_SC`>
+To run, `QHA` requires Python with certain packages:
 
+* Python 2.7 or higher.
+    Packages: `numpy`, `scipy`, `re`, `os`, `glob`, `itertools`, `subprocess`, `sys` (All of these come with a default [Anacaonda](https://www.continuum.io/downloads) installation).
 
-|E11 E12  E13|  
-|E21 E22  E23|  
-|E31 E32  E33|  
-<Value of `a1_SC`>    <Value of `a2_SC`>    <Value of `a3_SC`>
-.
-.
-.
-
-```
-Code: [supercell_generator.py](https://github.com/DavidCdeB/supercell_generator/blob/master/supercell_generator.py)
+* Standard `bash` version in your system.
 
 
-  [1]:  https://github.com/DavidCdeB/supercell_generator/blob/master/67.png
 
-  [2]:  https://github.com/DavidCdeB/supercell_generator/blob/master/65.png
-  
-  [3]:  https://github.com/DavidCdeB/supercell_generator/blob/master/64.png
+
+
+<a name="example7"></a>
+## Test
+
+Under the `TEST` folder, you will find all the python program needed
+needed, together with a 
+
+`Files_Outputs` folder with the frequency outputs of two phases: calcite I and calcite II.
+If you run the program, you will obtain the `main.pdf` with all the plots needed.
+
+<a name="example8"></a>
+## How to cite
+
+Please cite the following reference when using this code:
+
+Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_
+
+<a name="example9"></a>
+## Contributing
+
+`QHA` is free software released under the Gnu Public Licence version 3.
+All contributions to improve this code are more than welcome.
+
+* Have a look at GitHub's ["How to contribute"](https://guides.github.com/activities/contributing-to-open-source/#contributing).
+
+* If you are familiar with `git`: fork this repository and submit a pull request.
+
+* If you are not familiar with `git`:
+
+    * If something should be improved, open an issue here on GitHub
+    * If you think a new feature would be interesting, open an issue
+    * If you need a particular feature for your project contact me directly.
+
+<a name="example10"></a>
+## References
+
+
