@@ -6,10 +6,9 @@
 4. [Why is the `supercell_generator` useful ?](#example2)
 3. [Statement of the problem](#example3)
 4. [How to run `supercell_generator`](#example4)
-7. [Test](#example7)
-8. [How to cite](#example8)
-9. [Contributing](#example9)
-10. [References](#example10)
+5. [Test](#example5)
+6. [How to cite](#example6)
+7. [Contributing](#example7)
 
 
 
@@ -242,50 +241,109 @@ For example:
 
 <a name="example3"></a>
 3. [How to run `supercell_generator`. A guided tour](#example3)
-* 
-
-## How to run `supercell_generator`
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
 * Copy to the `supercell_generator` folder, any output for a single point calculation in the primitive cell.
+* The code will grab the direct matrix lattice vectors from this output.
 * Remember that name of all ths output has to end in `*.out`
+* Alternatively, you can hard code directly the direct matrix lattice vectors (primitive cell) in the variable `A`.
+
+* The default is to search supercell expansion matrices given by the integers 0, 1, -1. If you would like to use also integers +2 and -2, edit the `supercell_generator.py` code, the line 
+
+```
+itertools.product([0, 1, -1]
+```
+should be changed by
+
+```
+itertools.product([0, 1, 2, -1, -2]
+```
+
+* Set two tolerances. Remember this condition:
+
+```
+a1_SC ~= a2_SC ~= a3_SC > tol_1
+```
+    * `tol_1` controls how big the lattice parameters are. Tipically this value is 10 Angtrom. This is the default in the program.
+
+    * `tol_2` controls how similar are the lattice parameters. Typically this value is 1E-2, although it can be stricter. This is the default in the program.
+
 * Run `./supercell_generator.sh`
 
-* Alternatively, you can provide here the direct matrix lattice vectors (primitive cell):
+* If you run this program in the `TEST` folder, you will have the oppotunity to test this on Aragonite. The output is the following:
 
- 
+``` 
+./aragonite_SINGLE_POINT.out
+```
+This confirms the output that is being read.
+
+```
+A array =  [[ 4.9616  0.      0.    ]
+ [ 0.      7.9705  0.    ]
+ [ 0.      0.      5.7394]]
+```
+This tells you the direct matrix of lattice parameters that has been extracted.
+
+```
+tol_1 =  10
+tol_2 =  0.01
+```
+This confirms the tolerances being used.
+
+```
+len(E) =  19683
+```
+This confirms the number of matrices candidates for a combination of integers `0, 1, -1`.
+
+At this point, all the sucessful candidates will be printed:
+
+The direct lattice vectors of the supercell:
+```
+A_SC =  [[ 4.9616  7.9705  5.7394]
+ [ 4.9616  7.9705 -5.7394]
+ [-4.9616  7.9705  5.7394]]
+```
+The lattice parameters of the supercell. They are equal (with a small tolerance `tol_1`)
+
+a1_SC =  11.0039564326
+a2_SC =  11.0039564326
+a3_SC =  11.0039564326
+
+The determintant of the supercell expansion matrix:
+
+```det_indx_E =  4.0```
+
+The supercell expansion matrix we are up to:
+```
+E_sol =  [[ 1.  1.  1.]
+ [ 1.  1. -1.]
+ [-1.  1.  1.]]
+END ++++++++++
+````
+Thus, this supercell expansion matrix will be appropiate to satisty this condition:
+
+```
+a1_SC ~= a2_SC ~= a3_SC > tol_1
+```
 
 
-**_Prerequisites_**
-
-To run, `QHA` requires Python with certain packages:
-
-* Python 2.7 or higher.
-    Packages: `numpy`, `scipy`, `re`, `os`, `glob`, `itertools`, `subprocess`, `sys` (All of these come with a default [Anacaonda](https://www.continuum.io/downloads) installation).
-
-* Standard `bash` version in your system.
-
-
-
-
-
-<a name="example7"></a>
+<a name="example4"></a>
 ## Test
 
-Under the `TEST` folder, you will find all the python program needed
-needed, together with a 
+Under the `TEST` folder, you will find the python program needed, 
+together with an output file for aragonite.
 
-`Files_Outputs` folder with the frequency outputs of two phases: calcite I and calcite II.
-If you run the program, you will obtain the `main.pdf` with all the plots needed.
+If you run the program, you will obtain all the possible supercell expansion
+matrices needed.
 
-<a name="example8"></a>
+<a name="example5"></a>
 ## How to cite
 
 Please cite the following reference when using this code:
 
 Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_
 
-<a name="example9"></a>
+<a name="example6"></a>
 ## Contributing
 
 `QHA` is free software released under the Gnu Public Licence version 3.
@@ -300,8 +358,4 @@ All contributions to improve this code are more than welcome.
     * If something should be improved, open an issue here on GitHub
     * If you think a new feature would be interesting, open an issue
     * If you need a particular feature for your project contact me directly.
-
-<a name="example10"></a>
-## References
-
 
