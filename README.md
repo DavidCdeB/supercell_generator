@@ -237,7 +237,7 @@ For example:
 * If there are 5 integers: `[0, 1, -1, 2, -2]` there will be a total number of `1953125` 3x3 supercell expansion matrices candidates.
 
 
-<a name="example3"></a>
+<a name="example4"></a>
 # How to run `supercell_generator`. A guided tour through the output
 
 * Get the code: `git clone https://github.com/DavidCdeB/supercell_generator`
@@ -329,7 +329,7 @@ a1_SC ~= a2_SC ~= a3_SC > tol_1
 ```
 
 
-<a name="example4"></a>
+<a name="example5"></a>
 ## Test
 
 Under the `TEST` folder, you will find the python program needed, 
@@ -338,14 +338,14 @@ together with an output file for aragonite.
 If you run the program, you will obtain all the possible supercell expansion
 matrices needed.
 
-<a name="example5"></a>
+<a name="example6"></a>
 ## How to cite
 
 Please cite the following reference when using this code:
 
 Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_
 
-<a name="example6"></a>
+<a name="example7"></a>
 ## Contributing
 
 `QHA` is free software released under the Gnu Public Licence version 3.
