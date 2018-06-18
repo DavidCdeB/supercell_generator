@@ -327,7 +327,9 @@ The supercell expansion matrix `E_sol` will be appropiate to satisty this condit
 ```
 a1_SC ~= a2_SC ~= a3_SC > tol_1
 ```
-
+### Note:
+You might want to automate these runs using different tolerances `tol_2`
+by using the script `run.sh`
 
 <a name="example5"></a>
 ## Test
