@@ -340,12 +340,13 @@ together with an output file for aragonite.
 If you run the program, you will obtain all the possible supercell expansion
 matrices needed.
 
+<!--
 <a name="example6"></a>
 ## How to cite
 
 Please cite the following reference when using this code:
 
-Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_
+Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_ -->
 
 <a name="example7"></a>
 ## Contributing
