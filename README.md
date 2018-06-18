@@ -158,7 +158,7 @@ In reality, I am imposing two conditions:
 greater than a value.
 The following function implements this double condition:
 
-```
+```python
 def tolerance(a1_SC, a2_SC, a3_SC):
     tol_1 = 10
     tol_2 = 0.001
@@ -171,7 +171,7 @@ def tolerance(a1_SC, a2_SC, a3_SC):
 ```
 When it comes the time to calculate:
 
-```
+```python
 a1x_SC = E11 * a1x + E12 * a2x + E13 * a3x
 a1y_SC = E11 * a1y + E12 * a2y + E13 * a3y
 a1z_SC = E11 * a1z + E12 * a2z + E13 * a3z
@@ -187,7 +187,7 @@ a3z_SC = E31 * a1z + E32 * a2z + E33 * a3z
 
 There is this problem: considering what has been said above, it would be necessary to loop over the 5 possible values of `E11` (`E11 = [0, 1, 2, -1, -2]`), while  `E12`, `E13`, `E21`, `E22`, `E23`, `E31`, `E32` and `E33` remain the same. Something like:
 
-```
+```python
     for e11 in E11:
       a1x_SC = e11 * a1x + E12[0] * a2x + E13[0] * a3x
       a1y_SC = e11 * a1y + E12[0] * a2y + E13[0] * a3y
@@ -223,7 +223,7 @@ There is this problem: considering what has been said above, it would be necessa
 
 but this would not be considering all the possible combinations, because for a given `e11`, for instance, it is also valid:
 
-```
+```python
 a1x_SC = e11 * a1x + E12[0] * a2x + E13[0:-1] * a3x
 ```
 This is very cumbresome.
@@ -248,12 +248,12 @@ For example:
 
 * The default is to search supercell expansion matrices given by the integers 0, 1, -1. If you would like to use also integers +2 and -2, edit the `supercell_generator.py` code, the line 
 
-```
+```python
 itertools.product([0, 1, -1]
 ```
 should be changed by
 
-```
+```python
 itertools.product([0, 1, 2, -1, -2]
 ```
 
@@ -270,25 +270,25 @@ a1_SC ~= a2_SC ~= a3_SC > tol_1
 
 If you run this program in the `TEST` folder, you will have the oppotunity to test this on Aragonite. The output is the following:
 
-``` 
+``` python
 ./aragonite_SINGLE_POINT.out
 ```
 > This confirms that the output is being read.
 
-```
+```python
 A array =  [[ 4.9616  0.      0.    ]
  [ 0.      7.9705  0.    ]
  [ 0.      0.      5.7394]]
 ```
 > This tells you the direct matrix of lattice parameters that has been extracted.
 
-```
+```python
 tol_1 =  10
 tol_2 =  0.01
 ```
 > This confirms the tolerances being used.
 
-```
+```python
 len(E) =  19683
 ```
 > This confirms the number of matrices candidates for a combination of integers `0, 1, -1`.
@@ -296,14 +296,14 @@ len(E) =  19683
 At this point, all the sucessful candidates will be printed:
 
 > The direct lattice vectors of the supercell:
-```
+```python
 A_SC =  [[ 4.9616  7.9705  5.7394]
  [ 4.9616  7.9705 -5.7394]
  [-4.9616  7.9705  5.7394]]
 ```
 > The lattice parameters of the supercell. They are equal (with a small tolerance `tol_1`)
 
-```
+```python
 a1_SC =  11.0039564326
 a2_SC =  11.0039564326
 a3_SC =  11.0039564326
@@ -311,12 +311,12 @@ a3_SC =  11.0039564326
 
 > The determintant of the supercell expansion matrix:
 
-```
+```python
 det_indx_E =  4.0
 ```
 
 > The supercell expansion matrix we are up to:
-```
+```python
 E_sol =  [[ 1.  1.  1.]
  [ 1.  1. -1.]
  [-1.  1.  1.]]

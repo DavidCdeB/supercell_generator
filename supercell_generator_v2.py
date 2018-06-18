@@ -80,8 +80,8 @@ K = 3
 N = 3
 E = [np.reshape(np.array(i), (K, N)) for i in itertools.product([0, 1, -1], repeat = K*N)]
 
-tol_1 = 10
-tol_2 = 1E-6
+tol_1=10
+tol_2=1E-6
 
 print "tol_1 = ", tol_1
 print "tol_2 = ", tol_2
