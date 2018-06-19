@@ -346,7 +346,7 @@ matrices needed.
 
 Please cite the following reference when using this code:
 
-Carrasco-Busturia, D., Erba, A., Mallia, G., Mellan, T. A. and Harrison, N. M. "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_ -->
+Carrasco-Busturia, D., Harrison, N. M. _et al_ "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_ -->
 
 <a name="example7"></a>
 ## Contributing
