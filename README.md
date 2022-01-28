@@ -340,9 +340,8 @@ together with an output file for aragonite.
 If you run the program, you will obtain all the possible supercell expansion
 matrices needed.
 
-<!--
-<a name="example6"></a>
 
+<a name="example6"></a>
 ## How to cite
 
 Please cite the following reference when using this code:
