@@ -342,12 +342,32 @@ matrices needed.
 
 <!--
 <a name="example6"></a>
+
 ## How to cite
 
 Please cite the following reference when using this code:
 
-Carrasco-Busturia, D., Harrison, N. M. _et al_ "Computed phase stability and phase transition mechanisms in CaCO3 at finite temperature and pressure" _In progress_ -->
+D. Carrasco-Busturia, "The temperature - pressure phase diagram of the calcite I - calcite II
+phase transition: A first-principles investigation", Journal of Physics and Chemistry of Solids, vol. 154,
+p. 110 045, 2021. DOI: https://doi.org/10.1016/j.jpcs.2021.110045.
 
+<a name="example9"></a>
+
+Here the bibtex:
+
+```
+@article{CARRASCOBUSTURIA2021110045,                                                                        
+title = {The temperature - pressure phase diagram of the calcite {I} - calcite {II} phase transition: A first-principles investigation},
+journal = {Journal of Physics and Chemistry of Solids},
+volume = {154},
+pages = {110045},
+year = {2021},
+issn = {0022-3697},
+doi = {https://doi.org/10.1016/j.jpcs.2021.110045},
+url = {https://www.sciencedirect.com/science/article/pii/S0022369721001116},
+author = {David Carrasco-Busturia}
+}
+```
 <a name="example7"></a>
 ## Contributing
 
