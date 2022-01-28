@@ -350,8 +350,6 @@ D. Carrasco-Busturia, "The temperature - pressure phase diagram of the calcite I
 phase transition: A first-principles investigation", Journal of Physics and Chemistry of Solids, vol. 154,
 p. 110 045, 2021. DOI: https://doi.org/10.1016/j.jpcs.2021.110045.
 
-<a name="example9"></a>
-
 Here the bibtex:
 
 ```
